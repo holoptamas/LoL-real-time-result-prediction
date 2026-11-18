@@ -11,6 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 MODEL_PATH = BASE_DIR.parent / "League_Neural_Networks" / "league_model.pth"
 TRAIN_CSV_PATH = BASE_DIR.parent / "League_Match_Data" / "DS_2026_06_02_20_00_train.csv"
+LOG_PATH = BASE_DIR.parent / "League_Match_Log" / "prediction_log_01.txt"
 
 FRONTEND_DIST_PATH = (BASE_DIR.parent.parent/"AngularCode"/ "LoL_prediction"/ "dist"/ "LoL_prediction"/ "browser")
 
@@ -20,7 +21,7 @@ CORS(app)
 
 game_client = GameClientApiDataRetriever()
 
-prediction_service = PredictionService(game_client=game_client, model_path=MODEL_PATH, train_csv_path=TRAIN_CSV_PATH)
+prediction_service = PredictionService(game_client=game_client, model_path=MODEL_PATH, train_csv_path=TRAIN_CSV_PATH, allow_logging=True, log_path=LOG_PATH)
 
 prediction_service.start_prediction_loop()
 

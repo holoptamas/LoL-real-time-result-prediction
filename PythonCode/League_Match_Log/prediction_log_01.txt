@@ -1,0 +1,5 @@
+{'blue_win_probability': 0.9933823347091675, 'red_win_probability': 0.0066176652908325195, 'confidence': 0.986764669418335, 'predicted_winner': 'Blue', 'status': 'success', 'message': '', 'game_time': 900.0678100585938}
+{'blue_win_probability': 0.9894854426383972, 'red_win_probability': 0.010514557361602783, 'confidence': 0.9789708852767944, 'predicted_winner': 'Blue', 'status': 'success', 'message': '', 'game_time': 905.2411499023438}
+{'blue_win_probability': 0.9969629645347595, 'red_win_probability': 0.0030370354652404785, 'confidence': 0.993925929069519, 'predicted_winner': 'Blue', 'status': 'success', 'message': '', 'game_time': 914.2017822265625}
+{'blue_win_probability': 0.9995092153549194, 'red_win_probability': 0.0004907846450805664, 'confidence': 0.9990184307098389, 'predicted_winner': 'Blue', 'status': 'success', 'message': '', 'game_time': 919.3507690429688}
+{'blue_win_probability': 0.9997686743736267, 'red_win_probability': 0.00023132562637329102, 'confidence': 0.9995373487472534, 'predicted_winner': 'Blue', 'status': 'success', 'message': '', 'game_time': 924.4627075195312}

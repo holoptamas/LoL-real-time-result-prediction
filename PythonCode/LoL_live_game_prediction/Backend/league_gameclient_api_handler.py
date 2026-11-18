@@ -53,7 +53,7 @@ class GameClientApiDataRetriever:
             elif len(split_name2) == 2:
                 champion_Id = self.champ_id_df[self.champ_id_df['Name'] == (split_name2[0] + split_name2[1]).capitalize()]['ID'] 
             elif len(split_name1) == 2:
-                champion_Id = self.champ_id_df[self.champ_id_df['Name'] == split_name1[0] + split_name1[1]]['ID'] 
+                champion_Id = self.champ_id_df[self.champ_id_df['Name'] == split_name1[0] + split_name1[1]]['ID']
             else:
                 champion_Id = self.champ_id_df[self.champ_id_df['Name'] == champion_name]['ID']
 

@@ -1,3 +1,4 @@
+import os
 import time
 import threading
 import requests
@@ -9,11 +10,12 @@ from LoL_live_game_prediction.Backend.league_gameclient_api_handler import GameC
 
 
 class PredictionService:
-    def __init__(self, game_client:GameClientApiDataRetriever, model_path, train_csv_path):
+    def __init__(self, game_client:GameClientApiDataRetriever, model_path, train_csv_path, allow_logging=False, log_path=None):
         self.base_url = "https://127.0.0.1:2999/liveclientdata/allgamedata"
 
         self.game_client:GameClientApiDataRetriever = game_client
-
+        self.allow_logging = allow_logging
+        self.log_path = log_path
         dataset1 = pd.read_csv(train_csv_path)
         dataset1 = dataset1[~dataset1.eq("Invalid").any(axis=1)]
         self.train_dataset = LeagueTrainDataset(dataset1, "BlueTeamWin")
@@ -23,6 +25,7 @@ class PredictionService:
         self.latest_prediction = None
         self.latest_game_state = None
         self.is_running = False
+        self.log_counter = 0
 
     def start_prediction_loop(self):
         if self.is_running:
@@ -89,6 +92,9 @@ class PredictionService:
                 prediction_dict["game_time"] = current_time
 
                 self.latest_prediction = prediction_dict
+
+                if self.allow_logging and self.log_path is not None:
+                    self.log_prediction_to_file(self.log_path)
 
                 time.sleep(10)
 
@@ -168,3 +174,19 @@ class PredictionService:
             "creep_score": player.creepscore,
             "ward_score": player.wardscore
         }
+
+
+    def log_prediction_to_file(self, file_path):
+        if self.latest_prediction is None:
+            return
+
+        if not os.path.exists(file_path):
+            with open(file_path, "w") as f:
+                f.write(str(self.latest_prediction) + "\n")
+                
+                f.write("---------------------------------------------------------------------------------------------------------\n")
+        else:
+            with open(file_path, "a") as f:
+                f.write(str(self.latest_prediction) + "\n")
+                
+                f.write("---------------------------------------------------------------------------------------------------------\n")

@@ -32,7 +32,6 @@ ID;Name;Gold
 1106;Gustwalker Hatchling;450
 1107;Scorchclaw Pup;450
 1120;Doran's Helm;450
-1500;Penetrating Bullets;0
 1501;Fortification;0
 1502;Reinforced Armor;0
 1503;Warden's Eye;0
@@ -87,18 +86,18 @@ ID;Name;Gold
 2510;Dusk and Dawn;3100
 2512;Fiendhunter Bolts;2650
 2517;Endless Hunger;3100
-2520;Bastionbreaker;3200
+2520;Bastionbreaker;3000
 2522;Actualizer;2800
 2523;Hexoptics C44;2800
 2524;Bandlepipes;2300
-2525;Protoplasm Harness;2500
+2525;Protoplasm Harness;2600
 2526;Whispering Circlet;2250
 2530;Diadem of Songs;2250
 3002;Trailblazer;2400
 3003;Archangel's Staff;2900
 3004;Manamune;2900
 3006;Berserker's Greaves;1100
-3008;Gluttonous Greaves;1000
+3008;Gluttonous Greaves;1100
 3009;Boots of Swiftness;1000
 3010;Symbiotic Soles;900
 3011;Chemtech Putrifier;1900
@@ -107,7 +106,7 @@ ID;Name;Gold
 3024;Glacial Buckler;900
 3026;Guardian Angel;3200
 3031;Infinity Edge;3500
-3032;Yun Tal Wildarrows;3100
+3032;Yun Tal Wildarrows;3000
 3033;Mortal Reminder;3000
 3035;Last Whisper;1450
 3036;Lord Dominik's Regards;3300
@@ -124,7 +123,7 @@ ID;Name;Gold
 3065;Spirit Visage;2700
 3066;Winged Moonplate;800
 3067;Kindlegem;800
-3068;Sunfire Aegis;2700
+3068;Sunfire Aegis;2800
 3070;Tear of the Goddess;400
 3071;Black Cleaver;3000
 3072;Bloodthirster;3400
@@ -143,7 +142,7 @@ ID;Name;Gold
 3089;Rabadon's Deathcap;3500
 3091;Wit's End;2800
 3094;Rapid Firecannon;2650
-3097;Stormrazor;3200
+3095;Stormrazor;3200
 3100;Lich Bane;2900
 3102;Banshee's Veil;3000
 3107;Redemption;2300
@@ -182,7 +181,7 @@ ID;Name;Gold
 3158;Ionian Boots of Lucidity;900
 3161;Spear of Shojin;3100
 3165;Morellonomicon;2850
-3168;Immortal Path;1000
+3168;Immortal Path;1100
 3170;Swiftmarch;1000
 3171;Crimson Lucidity;900
 3172;Gunmetal Greaves;1100
@@ -261,7 +260,6 @@ ID;Name;Gold
 4635;Leeching Leer;1265
 4636;Night Harvester;2765
 4637;Demonic Embrace;3000
-4641;Stirring Wardstone;350
 4642;Bandleglass Mirror;900
 4645;Shadowflame;3200
 4646;Stormsurge;2800
@@ -312,6 +310,7 @@ ID;Name;Gold
 6699;Voltaic Cyclosword;3000
 6701;Opportunity;2700
 7050;Gangplank Placeholder;0
+771500;Penetrating Bullets;0
 8001;Anathema's Chains;2500
 8010;Bloodletter's Curse;2900
 8020;Abyssal Mask;2650

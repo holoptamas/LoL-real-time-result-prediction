@@ -7,10 +7,10 @@ from LoL_live_game_prediction.Neural_Network.league_dataset import LeagueTrainDa
 from LoL_live_game_prediction.Neural_Network.LeagueNeuralNetwork import LeagueNN
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DATASET_PATH = (BASE_DIR.parent/"League_Match_Data"/"2026_06_02_20_00.csv")
+BASE_DATASET_PATH = (BASE_DIR.parent/"League_Match_Data"/"2026.11.16.csv")
 MODEL_PATH = (BASE_DIR.parent/"League_Neural_Networks"/"league_model.pth")
-TRAIN_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_06_02_20_00_train.csv")
-TEST_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_06_02_20_00_test.csv")
+TRAIN_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_11_16_16_00_train.csv")
+TEST_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_11_16_16_00_test.csv")
 CHAMP_CSV_PATH = (BASE_DIR.parent/"LeagueAssets"/"ChampIdAndName.csv")
 
 dataset1 = pd.read_csv(BASE_DATASET_PATH)
@@ -18,7 +18,7 @@ dataset1 = dataset1.drop(["GameVersion", "BlueTeamKills", "BlueTeamGoldSpent", "
 dataset1 = dataset1[~dataset1.eq("Invalid").any(axis=1)]
 dataset1 = dataset1.iloc[:,:-1]
 shuffled_df = dataset1.sample(frac=1).reset_index(drop=True)
-split_index = int(len(shuffled_df) * 0.8)
+split_index = int(len(shuffled_df) * 0.67)
 traindf = shuffled_df.iloc[:split_index]
 traindf.to_csv(TRAIN_CSV_PATH, index=False)
 testdf = shuffled_df.iloc[split_index:]

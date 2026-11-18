@@ -27,6 +27,8 @@ class RawDataScraper:
             for key, value in champions_dict.items():
                 if value == "MonkeyKing":
                     file.write(f"{key},{"Wukong"}\n")
+                elif value == "Renata":
+                    file.write(f"{key},{"RenataGlasc"}\n")
                 else:
                     file.write(f"{key},{value}\n")
         print("ChampIdAndName file is complete")
@@ -255,5 +257,5 @@ if __name__ == "__main__":
     scraper = RawDataScraper(os.getenv('API_KEY'))
     scraper.get_champ_id_name()
     scraper.get_item_id_price()
-    scraper.scrape_ranked_data_from_api(15000, "", "", "", 16, 9)
+    scraper.scrape_ranked_data_from_api(15000, "2026.11.14", "Csanod", "6942", 16, 19)
     

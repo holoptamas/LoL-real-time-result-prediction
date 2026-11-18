@@ -99,8 +99,7 @@ export class MatchData{
   status: string 
   message?: string 
   game_duration: number
-  game_minute: string
-  game_seconds: number
+  game_time: string
   blue_team: TeamData 
   red_team: TeamData
 
@@ -108,10 +107,11 @@ export class MatchData{
     this.status = data.status
     this.message = data.message
     this.game_duration = data.game_duration
-    this.game_minute = (this.game_duration / 60).toFixed(0)
-    this.game_seconds = this.game_duration % 60
     this.blue_team = new TeamData(data.blue_team)
     this.red_team = new TeamData(data.red_team)
+    let minutes = Math.floor(this.game_duration / 60);
+    let seconds = this.game_duration % 60;
+    this.game_time = `${minutes}:${seconds.toString().padStart(2, '0')}`;
   }
 }
 

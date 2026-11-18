@@ -6,8 +6,8 @@ from LoL_live_game_prediction.Neural_Network.LeagueNeuralNetwork import LeagueNN
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 MODEL_PATH = (BASE_DIR.parent/"League_Neural_Networks"/"league_model.pth")
-TRAIN_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_06_02_20_00_train.csv")
-TEST_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_06_02_20_00_test.csv")
+TRAIN_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_11_16_16_00_train.csv")
+TEST_CSV_PATH = (BASE_DIR.parent/"League_Match_Data"/"DS_2026_11_16_16_00_test.csv")
 
 train_df = pd.read_csv(TRAIN_CSV_PATH)
 test_df = pd.read_csv(TEST_CSV_PATH)
