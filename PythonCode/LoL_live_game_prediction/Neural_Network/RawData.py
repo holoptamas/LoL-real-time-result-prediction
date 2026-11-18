@@ -45,6 +45,7 @@ class RawDataScraper:
             for key, value in data.items():
                 if bool(value['maps']['11']):
                         file.write(f"{key};{value['name']};{value['gold']['total']}\n")
+            file.write("3513;Eye of the Herald;0\n")
         print("Item CVS file is complete!")
             
 
