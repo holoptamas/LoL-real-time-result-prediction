@@ -58,10 +58,10 @@ class PredictionService:
                 self.game_client.raw_match_data(raw_game_data)
                 self.latest_game_state = self.match_data_to_dict()
 
-                if current_time < 900:
+                if current_time < 50:
                     self.latest_prediction = {
                         "status": "waiting",
-                        "message": "Waiting for 15 minute game time.",
+                        "message": "Waiting for 1 minute game time.",
                         "game_time": current_time
                     }
 

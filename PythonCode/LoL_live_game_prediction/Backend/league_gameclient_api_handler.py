@@ -43,15 +43,19 @@ class GameClientApiDataRetriever:
         red_player_names = ["","","","",""]
 
         for player in all_player_data:
-            champion_name = player['championName']
+            champ_name = player['championName']
+            champion_name = champ_name.lower()
             split_name1 = champion_name.split(" ")
             split_name2 = champion_name.split("\'")
             split_name3 = champion_name.split(". ")
+            split_name4 = champion_name.split(" & ")
 
-            if len(split_name3) == 2:
+            if len(split_name4) == 2:
+                champion_Id = self.champ_id_df[self.champ_id_df['Name'] == split_name4[0]]['ID']
+            elif len(split_name3) == 2:
                 champion_Id = self.champ_id_df[self.champ_id_df['Name'] == split_name3[0] + split_name3[1]]['ID']
             elif len(split_name2) == 2:
-                champion_Id = self.champ_id_df[self.champ_id_df['Name'] == (split_name2[0] + split_name2[1]).capitalize()]['ID'] 
+                champion_Id = self.champ_id_df[self.champ_id_df['Name'] == (split_name2[0] + split_name2[1])]['ID'] 
             elif len(split_name1) == 2:
                 champion_Id = self.champ_id_df[self.champ_id_df['Name'] == split_name1[0] + split_name1[1]]['ID']
             else:
